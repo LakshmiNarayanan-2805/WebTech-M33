@@ -1,0 +1,64 @@
+# CSS Background Properties:
+-> CSS background properties are used to control the background of HTML elements like colors, images, positioning, repeating, and sizing.
+-> Following are the important background properties:
+
+1. background-color:
+-> Used to set the background color of an element.
+-> Syntax: background-color: color;
+
+2. background-image:
+-> Used to add an image as background.
+-> Syntax: background-image: url("path");
+
+3. background-repeat:
+-> Controls whether background image repeats or not.
+-> By default image repeats.
+-> Syntax: background-repeat: repeat (default) | no-repeat | repeat-x | repeat-y;
+
+4. background-position:
+-> Used to position background image.
+-> Syntax: background-position: horizontal vertical;
+-> Most of the time we will use background-position: center;
+-> Values
+    left
+    right
+    center
+    top
+    bottom
+
+5. background-size:
+-> Controls size of background image.
+-> Syntax: background-size: auto (default) | cover | contain;
+-> cover is mostly used in real projects.
+
+6. background-attachment:
+-> It is used to define whether background scrolls or stays fixed.
+-> Syntax: scroll (default) | fixed;
+
+7. background:
+-> This is shorthand property.
+-> Instead of writing all properties separately, we can write in one line.
+-> Syntax: background: color image repeat position/size attachment;
+
+-> Example: 
+body{
+    background: lightblue url("nature.jpg") no-repeat center/cover fixed;
+}
+
+8. background-clip:
+-> The background-clip in CSS is used to decide where the background color or background image should be visible.
+-> Syntax: background-clip: border-box(default) | padding-box | content-box;
+
+# Special & Popular Usage → Text Gradient
+-> background-clip: text
+-> It is used to provide background as gradient for the text.
+
+
+# Important Interview Questions:
+Q.1 Difference between cover and contain?
+-> cover = covers full container, Some image may crop
+-> contain = shows full image, No cropping
+
+Q.2 What is shorthand background property?
+-> Using multiple background properties in single line.
+-> Syntax: background: color image repeat position/size attachment;
