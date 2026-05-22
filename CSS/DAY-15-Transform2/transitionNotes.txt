@@ -1,0 +1,77 @@
+# What is Transition in CSS?
+-> The transition property in CSS is used to create smooth animation effects when a property changes from one value to another.
+-> Without transition: Changes happen instantly.
+-> With transition: Changes happen smoothly over time.
+
+# Transition Properties:
+-> There are 4 main transition properties:
+    1. transition-property: For which property you have to give smooth behaviour
+    2. transition-duration: Duration for smooth change
+    3. transition-timing-function: Speed for the change
+    4. transition-delay: Provides delay before the smooth changes start
+
+
+1. transition-property:
+-> It is used to specify for which CSS property you want to apply smooth behavior (transition).
+-> Syntax: transition-property: property-name;
+-> Example: 
+.box {
+    transition-property: border-radius, color, etc;
+}
+
+
+2. transition-duration:
+-> It is used to specify the time duration for the smooth change to complete.
+-> Syntax: transition-duration: time;
+-> Time can be:
+    s = seconds
+    ms = milliseconds (1s = 1000ms)
+
+-> Important: Without duration, transition will NOT work.
+
+
+3. transition-timing-function:
+-> It is used to specify the speed pattern/style of the smooth change.
+-> Syntax: transition-timing-function: value;
+-> Common timing functions values:
+| Value           | Meaning                           |
+| -------------   | --------------------------------- |
+|  ease (default) | Slow start, fast middle, slow end |
+|  linear         | Same speed throughout             |
+|  ease-in        | Slow start                        |
+|  ease-out       | Slow end                          |
+|  ease-in-out    | Slow start and end                |
+
+
+4. transition-delay:
+-> It is used to provide delay before the smooth change starts.
+-> Syntax: transition-delay: time;
+-> Example: transition-delay: 1s;
+-> Transition starts after 1 second.
+
+# Shorthand Property:
+-> Most commonly used.
+-> Syntax: transition: property duration timing-function delay;
+-> Example: transition: all 0.5s ease;
+    Here,
+    all -> Apply transition for all properties
+    0.5s -> Duration to complete the change
+    ease -> speed for the transition (slow->fast->slow) (timing-function)
+
+# Note: Some Properties That Cannot Transition Properly
+    1.display
+    2.position
+    3.float
+
+# Mistake to avoid:
+-> Wrong❌
+    .box:hover {
+        transition: all 1s linear;
+    }
+
+-> Correct✅
+    .box {
+        transition: all 1s linear;
+    }
+
+-> Transition should be placed on the original element state.

@@ -1,0 +1,100 @@
+# What is transform in CSS?
+-> The transform property in CSS is used to change the position, size, shape, or rotation of an element without affecting the normal document flow.
+
+-> Using transform, we can:
+    1.Move elements
+    2.Rotate elements
+    3.Resize elements
+    4.Skew elements
+    5.Combine multiple transformations
+
+# Types of Transform Functions:
+-> There are mainly 4 functions:
+    1.translate()
+    2.rotate()
+    3.scale()
+    4.skew()
+
+1. translate():
+-> It is used to move an element from its current position.
+-> Syntax: transform: translate(x, y);
+            x → horizontal movement
+            y → vertical movement
+
+-> Individual Translate Functions: 
+    1.translateX(): Moves only horizontally.
+    2.translateY(): Moves only vertically.
+
+2. rotate():
+-> It is used to rotate the an element.
+-> Syntax: transform: rotate(angle);
+            Positive Value -> clockwise
+            Negative Value -> anticlockwise
+
+-> By default it will rotate around z-axis.
+-> Individual Rotate Functions: 
+    1.rotateX(): Rotate only about x-axis.
+    2.rotateY(): Rotate only about Y-axis.
+
+3. scale():
+-> It is used to increase or decrease element size.
+-> Syntax: transform: scale(x, y);
+-> Individual Scale Functions:
+    1. scaleX(): Increases width.
+    2. scaleY(): Increases height.
+
+-> Important:
+    1  -> Original size (No change)
+    >1 -> Increase the size
+    <1 -> Decrease the size
+
+4. skew():
+-> It is used to tilt an element.
+-> Syntax: transform: skew(x-angle, y-angle);
+-> Individual Skew Functions:
+    1. skewX(): Tile an element in X-axis.
+    2. skewY(): Tilt an element in Y-axis.
+
+# Combining Multiple Transforms:
+-> We can apply multiple transforms together.
+-> Syntax: 
+    transform: translateX(100px) rotate(45deg) scale(1.2);
+
+# Transform Origin Property:
+-> It is used to change the starting point of transformation.
+-> Syntax: transform-origin: x y;
+-> Common Values:
+| Value  | Meaning |
+| ------ | ------- |
+| center | Default |
+| top    | Top     |
+| bottom | Bottom  |
+| left   | Left    |
+| right  | Right   |
+
+# Perspective in 3D:
+-> Perspective is the distance between the viewer(screen) and the element in 3D space.
+-> Syntax: perspective: value(px);
+
+-> Small perspective value = object looks more closer
+-> Large perspective value = object looks farther away
+
+-> Example:
+.container {
+    perspective: 500px;
+}
+-> 500px means the viewer is 500px away from the object.
+
+# Important Note:
+-> Perspective is usually applied to the parent element, not directly on the child being transformed.
+
+# Ideal Range:
+| Perspective Value | Effect                   |
+| ----------------- | ------------------------ |
+| 200px – 500px     | Strong 3D effect         |
+| 600px – 1000px    | Natural/realistic effect |
+| 1000px+`          | Subtle/flat effect       |
+
+
+
+
