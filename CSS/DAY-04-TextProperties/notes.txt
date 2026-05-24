@@ -29,6 +29,8 @@
 8. text-shadow: Used to add shadow to text.
    syntax: text-shadow: x-axis y-axis blur color;
    example: text-shadow: 2px 2px 5px red;
+   x-axis means shadow start from left to right(postive(5px)-right,negative (_5PX)-left)
+    y-axis means shadow start from top to bottom(postive(5px)-bottom,negative (_5PX)-top)
 
 9. line-height: Used to control spacing between lines.
    syntax: line-height: 40px;
